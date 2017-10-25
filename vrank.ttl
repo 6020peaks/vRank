@@ -16,18 +16,11 @@
     vann:preferredNamespacePrefix "vrank";
     foaf:homepage <https://github.com/6020peaks/vRank>;
     dcterms:created "2012-06-05"^^xsd:date;
-    dcterms:type <http://purl.org/adms/assettype/Ontology>;
     owl:versionInfo "v2.0";
     dc:creator
         <http://dblp.org/pers/t/Thalhammer_0001:Andreas>,
         <http://dblp.org/pers/r/Roa=Valverde:Antonio_J=>,
         <http://dblp.org/pers/t/Toma:Ioan> .
-
-<http://vocab.sti2.at/vrank#ttl>
-    dcterms:FileFormat <> .
-
-<http://vocab.sti2.at/vrank#rdf>
-    dcterms:FileFormat <> .
 
 <http://dblp.org/pers/t/Thalhammer_0001:Andreas> a foaf:Person;
     foaf:name "Andreas Thalhammer";
@@ -35,7 +28,7 @@
 
 <http://dblp.org/pers/r/Roa=Valverde:Antonio_J=> a foaf:Person;
     foaf:name "Antonio J. Roa-Valverde";
-    foaf:homepage <https://6020peaks.github.io/> .
+    foaf:homepage <https://6020peaks.github.io> .
 
 <http://dblp.org/pers/t/Toma:Ioan> a foaf:Person;
     foaf:name "Ioan Toma" .
@@ -74,12 +67,6 @@ vrank:hasParameter a rdf:Property;
     rdfs:domain vrank:Algorithm;
     rdfs:range vrank:Parameter .
 
-vrank:hasRank a rdf:Property;
-    rdfs:label "has rank";
-    rdfs:comment "A subject, property or object hasRank a vrank:Rank.";
-    rdfs:domain owl:Thing;
-    rdfs:range vrank:Rank .
-
 vrank:hasName a rdf:Property, owl:DatatypeProperty, owl:FunctionalProperty;
     rdfs:label "has name";
     rdfs:comment "A vrank:Algorithm has a name.";
@@ -92,10 +79,30 @@ vrank:hasRankTimeStamp a rdf:Property, owl:FunctionalProperty;
     rdfs:domain vrank:Rank;
     rdfs:range xsd:datetime .
 
+vrank:hasRank a rdf:Property;
+    rdfs:label "has rank";
+    rdfs:comment "A subject, property or object hasRank a vrank:Rank.";
+    rdfs:domain owl:Thing;
+    rdfs:range vrank:Rank .
+
 vrank:rankValue a rdf:Property, owl:DatatypeProperty, owl:FunctionalProperty;
     rdfs:label "has rank value";
     rdfs:comment "The numerical value associated to a vrank:Rank.";
     rdfs:domain vrank:Rank;
+    rdfs:range xsd:float .
+
+vrank:simpleRank a rdf:Property, owl:DatatypeProperty, owl:FunctionalProperty;
+    owl:propertyChainAxiom (vrank:hasRank vrank:rankValue) ;
+    rdfs:label "rank";
+    rdfs:comment "Directly connects owl:Thing with ranking values.";
+    rdfs:domain owl:Thing;
+    rdfs:range xsd:float .
+
+vrank:pagerank a rdf:Property, owl:DatatypeProperty, owl:FunctionalProperty;
+    rdfs:subPropertyOf vrank:simpleRank ;
+    rdfs:label "pagerank";
+    rdfs:comment "Directly connects owl:Thing with PageRrank values.";
+    rdfs:domain owl:Thing;
     rdfs:range xsd:float .
 
 vrank:paramId a rdf:Property, owl:DatatypeProperty, owl:FunctionalProperty;
