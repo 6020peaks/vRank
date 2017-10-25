@@ -20,7 +20,7 @@
     dcterms:partOf <http://vocab.sti2.at>;
     dcterms:type <http://purl.org/adms/assettype/Ontology>;
     dcterms:status <http://purl.org/adms/status/UnderDevelopment>;
-    owl:versionInfo	"1.0";
+    owl:versionInfo "v1.0";
     dc:creator
         <http://vocab.sti2.at/vrank#andtha>,
         <http://vocab.sti2.at/vrank#aroa>,
