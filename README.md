@@ -12,7 +12,6 @@ If you use this work, please mention it in your references:
   Year                     = {2012},
   Url                      = {http://km.aifb.kit.edu/services/summa/dbrank2012.pdf}
 }
-  }
   ```
 
 # Changelog
