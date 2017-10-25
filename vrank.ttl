@@ -101,7 +101,7 @@ vrank:simpleRank a rdf:Property, owl:DatatypeProperty, owl:FunctionalProperty;
 vrank:pagerank a rdf:Property, owl:DatatypeProperty, owl:FunctionalProperty;
     rdfs:subPropertyOf vrank:simpleRank ;
     rdfs:label "pagerank";
-    rdfs:comment "Directly connects owl:Thing with PageRrank values.";
+    rdfs:comment "Directly connects owl:Thing with PageRank values.";
     rdfs:domain owl:Thing;
     rdfs:range xsd:float .
 
