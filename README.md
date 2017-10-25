@@ -16,6 +16,6 @@ If you use this work, please mention it in your references:
   ```
 
 # Changelog
-* v2.0 
-* v1.0 Initial release of vRank, 2012-06-05
+* __v2.0 (2017-10-31)__ Adding support for relating owl:Thing to ranking values directly. More specifically, the properties vrank:simpleRank and vrank:pagerank were added.
+* __v1.0 (2012-06-05)__ Initial release of vRank.
 
