@@ -57,13 +57,13 @@ vrank:computedBy a rdf:Property;
 
 vrank:hasFeature a rdf:Property;
     rdfs:label "has feature";
-    rdfs:comment "TODO.";
+    rdfs:comment "Relates vrank:Algorithm with vrank:Feature.";
     rdfs:domain vrank:Algorithm;
     rdfs:range vrank:Feature .
 
 vrank:hasParameter a rdf:Property;
     rdfs:label "has parameter";
-    rdfs:comment "TODO.";
+    rdfs:comment "Relates vrank:Algorithm with vrank:Parameter.";
     rdfs:domain vrank:Algorithm;
     rdfs:range vrank:Parameter .
 
