@@ -130,7 +130,7 @@
     <rdfs:label>has feature</rdfs:label>
   </rdf:Description>
   <rdf:Description rdf:about="http://purl.org/voc/vrank#hasFeature">
-    <rdfs:comment>TODO.</rdfs:comment>
+    <rdfs:comment>Relates vrank:Algorithm with vrank:Feature.</rdfs:comment>
   </rdf:Description>
   <rdf:Description rdf:about="http://purl.org/voc/vrank#hasFeature">
     <rdfs:domain rdf:resource="http://purl.org/voc/vrank#Algorithm"/>
@@ -145,7 +145,7 @@
     <rdfs:label>has parameter</rdfs:label>
   </rdf:Description>
   <rdf:Description rdf:about="http://purl.org/voc/vrank#hasParameter">
-    <rdfs:comment>TODO.</rdfs:comment>
+    <rdfs:comment>Relates vrank:Algorithm with vrank:Parameter.</rdfs:comment>
   </rdf:Description>
   <rdf:Description rdf:about="http://purl.org/voc/vrank#hasParameter">
     <rdfs:domain rdf:resource="http://purl.org/voc/vrank#Algorithm"/>
@@ -280,7 +280,7 @@
     <rdfs:label>pagerank</rdfs:label>
   </rdf:Description>
   <rdf:Description rdf:about="http://purl.org/voc/vrank#pagerank">
-    <rdfs:comment>Directly connects owl:Thing with PageRrank values.</rdfs:comment>
+    <rdfs:comment>Directly connects owl:Thing with PageRank values.</rdfs:comment>
   </rdf:Description>
   <rdf:Description rdf:about="http://purl.org/voc/vrank#pagerank">
     <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
