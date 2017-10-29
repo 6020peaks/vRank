@@ -8,7 +8,8 @@
 @prefix vrank: <http://purl.org/voc/vrank#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
-<http://vocab.sti2.at/vrank> a owl:Ontology;
+<http://purl.org/voc/vrank> a owl:Ontology;
+    owl:sameAs <http://vocab.sti2.at/vrank> ; # compatibility to v1.0
     dcterms:title "Vocabulary for Ranking (vRank)";
     dcterms:description "The Vocabulary for Ranking (vRank) is an RDF Schema vocabulary for materializing ranking computations.";
     dcterms:modified "2017-10-31"^^xsd:date;

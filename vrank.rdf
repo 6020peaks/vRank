@@ -1,39 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
 <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:foaf="http://xmlns.com/foaf/0.1/" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:vann="http://purl.org/vocab/vann/" xmlns:vrank="http://purl.org/voc/vrank#" xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
-  <rdf:Description rdf:about="http://vocab.sti2.at/vrank">
+  <rdf:Description rdf:about="http://purl.org/voc/vrank">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://vocab.sti2.at/vrank">
+  <rdf:Description rdf:about="http://purl.org/voc/vrank">
+    <owl:sameAs rdf:resource="http://vocab.sti2.at/vrank"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/voc/vrank">
     <dcterms:title>Vocabulary for Ranking (vRank)</dcterms:title>
   </rdf:Description>
-  <rdf:Description rdf:about="http://vocab.sti2.at/vrank">
+  <rdf:Description rdf:about="http://purl.org/voc/vrank">
     <dcterms:description>The Vocabulary for Ranking (vRank) is an RDF Schema vocabulary for materializing ranking computations.</dcterms:description>
   </rdf:Description>
-  <rdf:Description rdf:about="http://vocab.sti2.at/vrank">
+  <rdf:Description rdf:about="http://purl.org/voc/vrank">
     <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2017-10-31</dcterms:modified>
   </rdf:Description>
-  <rdf:Description rdf:about="http://vocab.sti2.at/vrank">
+  <rdf:Description rdf:about="http://purl.org/voc/vrank">
     <vann:preferredNamespaceUri>http://purl.org/voc/vrank#</vann:preferredNamespaceUri>
   </rdf:Description>
-  <rdf:Description rdf:about="http://vocab.sti2.at/vrank">
+  <rdf:Description rdf:about="http://purl.org/voc/vrank">
     <vann:preferredNamespacePrefix>vrank</vann:preferredNamespacePrefix>
   </rdf:Description>
-  <rdf:Description rdf:about="http://vocab.sti2.at/vrank">
+  <rdf:Description rdf:about="http://purl.org/voc/vrank">
     <foaf:homepage rdf:resource="https://github.com/6020peaks/vRank"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://vocab.sti2.at/vrank">
+  <rdf:Description rdf:about="http://purl.org/voc/vrank">
     <dcterms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2012-06-05</dcterms:created>
   </rdf:Description>
-  <rdf:Description rdf:about="http://vocab.sti2.at/vrank">
+  <rdf:Description rdf:about="http://purl.org/voc/vrank">
     <owl:versionInfo>v2.0</owl:versionInfo>
   </rdf:Description>
-  <rdf:Description rdf:about="http://vocab.sti2.at/vrank">
+  <rdf:Description rdf:about="http://purl.org/voc/vrank">
     <dc:creator rdf:resource="http://dblp.org/pers/t/Thalhammer_0001:Andreas"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://vocab.sti2.at/vrank">
+  <rdf:Description rdf:about="http://purl.org/voc/vrank">
     <dc:creator rdf:resource="http://dblp.org/pers/r/Roa=Valverde:Antonio_J="/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://vocab.sti2.at/vrank">
+  <rdf:Description rdf:about="http://purl.org/voc/vrank">
     <dc:creator rdf:resource="http://dblp.org/pers/t/Toma:Ioan"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://dblp.org/pers/t/Thalhammer_0001:Andreas">
