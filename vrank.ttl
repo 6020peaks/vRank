@@ -8,49 +8,31 @@
 @prefix vrank: <http://purl.org/voc/vrank#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
-<http://vocab.sti2.at/vrank> a owl:Ontology;
+<http://purl.org/voc/vrank> a owl:Ontology;
+    owl:sameAs <http://vocab.sti2.at/vrank> ; # compatibility to v1.0
     dcterms:title "Vocabulary for Ranking (vRank)";
     dcterms:description "The Vocabulary for Ranking (vRank) is an RDF Schema vocabulary for materializing ranking computations.";
-    dcterms:modified "2012-06-05"^^xsd:date;
+    dcterms:modified "2017-10-31"^^xsd:date;
     vann:preferredNamespaceUri "http://purl.org/voc/vrank#";
     vann:preferredNamespacePrefix "vrank";
-    foaf:homepage <http://vocab.sti2.at/vrank.html>;
+    foaf:homepage <https://github.com/6020peaks/vRank>;
     dcterms:created "2012-06-05"^^xsd:date;
-    dcterms:publisher "http://vocab.sti2.at/vrank#STI%20Innsbruck";
-    dcterms:partOf <http://vocab.sti2.at>;
-    dcterms:type <http://purl.org/adms/assettype/Ontology>;
-    dcterms:status <http://purl.org/adms/status/UnderDevelopment>;
-    owl:versionInfo "v1.0";
+    owl:versionInfo "v2.0";
     dc:creator
-        <http://vocab.sti2.at/vrank#andtha>,
-        <http://vocab.sti2.at/vrank#aroa>,
-        <http://vocab.sti2.at/vrank#itoma> .
+        <http://dblp.org/pers/t/Thalhammer_0001:Andreas>,
+        <http://dblp.org/pers/r/Roa=Valverde:Antonio_J=>,
+        <http://dblp.org/pers/t/Toma:Ioan> .
 
-<http://vocab.sti2.at/vrank#ttl>
-    dcterms:FileFormat <> .
-
-<http://vocab.sti2.at/vrank#rdf>
-    dcterms:FileFormat <> .
-
-<http://vocab.sti2.at/vrank#andtha> a foaf:Person;
+<http://dblp.org/pers/t/Thalhammer_0001:Andreas> a foaf:Person;
     foaf:name "Andreas Thalhammer";
-    foaf:homepage <> .
+    foaf:homepage <http://andreas.thalhammer.bayern> .
 
-<http://vocab.sti2.at/vrank#STI%20Innsbruck> a dcterms:Agent;
-    foaf:member
-        <http://vocab.sti2.at/vrank#andtha>,
-        <http://vocab.sti2.at/vrank#aroa>,
-        <http://vocab.sti2.at/vrank#itoma>;
-    foaf:name "STI Innsbruck";
-    foaf:homepage <> .
-
-<http://vocab.sti2.at/vrank#aroa> a foaf:Person;
+<http://dblp.org/pers/r/Roa=Valverde:Antonio_J=> a foaf:Person;
     foaf:name "Antonio J. Roa-Valverde";
-    foaf:homepage <> .
+    foaf:homepage <https://6020peaks.github.io> .
 
-<http://vocab.sti2.at/vrank#itoma> a foaf:Person;
-    foaf:name "Ioan Toma";
-    foaf:homepage <> .
+<http://dblp.org/pers/t/Toma:Ioan> a foaf:Person;
+    foaf:name "Ioan Toma" .
 
 vrank:Rank a rdfs:Class, owl:Class;
     rdfs:label "rank";
@@ -76,21 +58,15 @@ vrank:computedBy a rdf:Property;
 
 vrank:hasFeature a rdf:Property;
     rdfs:label "has feature";
-    rdfs:comment "TODO.";
+    rdfs:comment "Relates vrank:Algorithm with vrank:Feature.";
     rdfs:domain vrank:Algorithm;
     rdfs:range vrank:Feature .
 
 vrank:hasParameter a rdf:Property;
     rdfs:label "has parameter";
-    rdfs:comment "TODO.";
+    rdfs:comment "Relates vrank:Algorithm with vrank:Parameter.";
     rdfs:domain vrank:Algorithm;
     rdfs:range vrank:Parameter .
-
-vrank:hasRank a rdf:Property;
-    rdfs:label "has rank";
-    rdfs:comment "A subject, property or object hasRank a vrank:Rank.";
-    rdfs:domain owl:Thing;
-    rdfs:range vrank:Rank .
 
 vrank:hasName a rdf:Property, owl:DatatypeProperty, owl:FunctionalProperty;
     rdfs:label "has name";
@@ -104,10 +80,30 @@ vrank:hasRankTimeStamp a rdf:Property, owl:FunctionalProperty;
     rdfs:domain vrank:Rank;
     rdfs:range xsd:datetime .
 
+vrank:hasRank a rdf:Property;
+    rdfs:label "has rank";
+    rdfs:comment "A subject, property or object hasRank a vrank:Rank.";
+    rdfs:domain owl:Thing;
+    rdfs:range vrank:Rank .
+
 vrank:rankValue a rdf:Property, owl:DatatypeProperty, owl:FunctionalProperty;
     rdfs:label "has rank value";
     rdfs:comment "The numerical value associated to a vrank:Rank.";
     rdfs:domain vrank:Rank;
+    rdfs:range xsd:float .
+
+vrank:simpleRank a rdf:Property, owl:DatatypeProperty, owl:FunctionalProperty;
+    owl:propertyChainAxiom (vrank:hasRank vrank:rankValue) ;
+    rdfs:label "rank";
+    rdfs:comment "Directly connects owl:Thing with ranking values.";
+    rdfs:domain owl:Thing;
+    rdfs:range xsd:float .
+
+vrank:pagerank a rdf:Property, owl:DatatypeProperty, owl:FunctionalProperty;
+    rdfs:subPropertyOf vrank:simpleRank ;
+    rdfs:label "pagerank";
+    rdfs:comment "Directly connects owl:Thing with PageRank values.";
+    rdfs:domain owl:Thing;
     rdfs:range xsd:float .
 
 vrank:paramId a rdf:Property, owl:DatatypeProperty, owl:FunctionalProperty;
